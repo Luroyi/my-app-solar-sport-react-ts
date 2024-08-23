@@ -22,6 +22,13 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   
   },
+  message: {
+    fontSize: 16,
+    color: '#000000',
+    textAlign: 'center',
+    marginBottom: 20,
+    paddingHorizontal: 20,
+  },
   header: {
     fontSize: 32,
     color: color.light.text,

@@ -1,32 +1,20 @@
-
 import styles from '@/constants/styles'; // Importando los estilos centralizados
-import auth from '@/credentials';
-import { useNavigation } from "@react-navigation/native";
-import { Link } from 'expo-router';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { Link } from 'expo-router'; // Asegúrate de que Link esté importado
 import React, { useState } from "react";
 import { Alert, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-
-const register = () => {
+const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigation = useNavigation<any>();
 
-        try {
-            await signInWithEmailAndPassword(auth, email, password);
-            Alert.alert("Success", "Inicio de sesión exitoso");
-            // navigation.navigate('home');
-        } catch (error: any) {
-            const { message } = error;
-            Alert.alert("Error", message ? message : 'Error encontrado');
-        }
+    const handleRegister = async () => {
+        // Aquí puedes añadir la lógica para registrar un nuevo usuario
+        Alert.alert("Éxito", "Registro exitoso");
     };
 
     return (
         <View style={styles.container}>
-            {/* Botón de "volver" en la parte superior derecha */}
-            <Link href="./login" style={styles.backButton}>
+            <Link href="/login" style={styles.backButton}>
                 <Text style={styles.backButtonText}>Volver</Text>
             </Link>
             <Text style={styles.header}>Crear Cuenta</Text>
@@ -52,22 +40,22 @@ const register = () => {
                 placeholderTextColor="#8B8B8B"
             />
 
-            <Text style={styles.label}>confirmar contraseña</Text>
+            <Text style={styles.label}>Confirmar contraseña</Text>
             <TextInput
                 style={styles.input}
-                placeholder="confirmar contraseña"
+                placeholder="Confirmar contraseña"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
                 placeholderTextColor="#8B8B8B"
             />
 
-            {/* Botón con bordes redondeados */}
-            <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                <Text style={styles.buttonText}>Registrase</Text>
+            <TouchableOpacity style={styles.button} onPress={handleRegister}>
+                <Text style={styles.buttonText}>Registrarse</Text>
             </TouchableOpacity>
         </View>
     );
 };
 
-export default register;
+export default Register;
+
