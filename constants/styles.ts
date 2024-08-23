@@ -80,9 +80,6 @@ const styles = StyleSheet.create({
   backgroundPrimary:{
     backgroundColor: color.light.tint,
   },
-  weight800:{
-    fontWeight: 800
-  },
   weight400:{
     fontWeight: 400
   },

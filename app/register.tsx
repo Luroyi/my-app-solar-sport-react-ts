@@ -13,7 +13,6 @@ const register = () => {
     const [password, setPassword] = useState("");
     const navigation = useNavigation<any>();
 
-    const handleLogin = async () => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             Alert.alert("Success", "Inicio de sesión exitoso");
@@ -62,13 +61,11 @@ const register = () => {
                 secureTextEntry
                 placeholderTextColor="#8B8B8B"
             />
-            
 
             {/* Botón con bordes redondeados */}
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
                 <Text style={styles.buttonText}>Registrase</Text>
             </TouchableOpacity>
-
         </View>
     );
 };
