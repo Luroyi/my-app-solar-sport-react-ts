@@ -1,5 +1,4 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -7,7 +6,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 export const unstable_settings = {
-  initialRouteName: 'login',
+  initialRouteName: 'splash',
 };
 
 SplashScreen.preventAutoHideAsync();
@@ -29,13 +28,12 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="login" options={{ headerShown: false }} />
-        <Stack.Screen name="register" options={{ headerShown: false }} />
-        <Stack.Screen name="forgetpassword" options={{ headerShown: false }} />
-      </Stack>
-    </ThemeProvider>
+    <Stack>
+      <Stack.Screen name="splash" options={{ headerShown: false }} />
+      <Stack.Screen name="landing" options={{ headerShown: false }} />
+      <Stack.Screen name="login" options={{ headerShown: false }} />
+      <Stack.Screen name="registor" options={{ headerShown: false }} />
+      <Stack.Screen name="forgetpassword" options={{ headerShown: false }} />
+    </Stack>
   );
 }
-

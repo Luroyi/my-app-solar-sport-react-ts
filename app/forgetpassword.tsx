@@ -1,4 +1,5 @@
 import styles from '@/constants/styles';
+import { Link } from 'expo-router';
 import React, { useState } from 'react';
 import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
@@ -16,6 +17,9 @@ const ForgetPassword = () => {
 
     return (
         <View style={styles.container}>
+            <Link href="/login" style={styles.backButton}>
+                <Text style={styles.backButtonText}>Volver</Text>
+            </Link>
             <Text style={styles.message}>
                 Para restablecer su contraseña, ingrese su dirección de correo electrónico, por favor.
             </Text>

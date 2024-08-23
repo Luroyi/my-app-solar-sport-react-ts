@@ -51,9 +51,6 @@ const Login = () => {
                 <Text style={styles.buttonText}>Iniciar sesión</Text>
             </TouchableOpacity>
 
-            <Link href="/register" style={[styles.colorBlack, { textAlign: 'center' }]}>
-                ¿No tienes una cuenta? <Text style={[styles.colorPrimary, { textAlign: 'center' }]}>Regístrate</Text>
-            </Link>
         </View>
     );
 };

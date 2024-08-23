@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   } as TextStyle,
   button: {
     backgroundColor: '#FF6060',
-    paddingVertical: 10,
+    padding: 15,
     paddingHorizontal: 20,
     borderRadius: 6,
     alignItems: 'center',
@@ -64,14 +64,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     //fontFamily: 'Montserrat_700Bold',
     fontWeight: 'bold',
-  } as TextStyle,
+    
+  },
   link: {
-    fontSize: 12,
+    fontSize: 18,
     color: '#FF6060',
-    textDecorationLine: 'underline',
-    alignSelf: 'flex-end', // Alinea el enlace a la derecha
+    textDecorationLine: 'underline', // Esto es opcional si quieres subrayar el link
     marginVertical: 10,
-  } as TextStyle,
+  },
   registerLink: {
     fontSize: 14,
     color: '#FF6060',
@@ -87,9 +87,6 @@ const styles = StyleSheet.create({
   backgroundPrimary:{
     backgroundColor: color.light.tint,
   },
-  weight400:{
-    fontWeight: 400
-  },
   fontSizeSmall: {
     fontSize: 12
   },
@@ -104,6 +101,10 @@ const styles = StyleSheet.create({
   },
   marginBottom1: {
     marginBottom:60
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 40,
   },
 });
 
