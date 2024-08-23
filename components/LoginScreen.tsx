@@ -14,7 +14,6 @@ const LoginScreen: React.FC = (props) => {
         try{
 
             await signInWithEmailAndPassword(auth,email,password);
-            
             Alert.alert("Success", "Inicio de sesión exitoso");
             //props.navigation.navigate('home');     
          } 
@@ -44,10 +43,7 @@ const LoginScreen: React.FC = (props) => {
         />
         <Button title='Login' onPress={handleLogin} />
         </View>
-
     );
 };
 
 export default LoginScreen;
-
-
